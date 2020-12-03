@@ -1,8 +1,9 @@
 .title {
     
     text-align: left;
-    color: lightskyblue;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #0fa3b1;
+    font-family: 'Alice', serif;
+    font-family: 'Comfortaa', cursive;
     font-size: 40px;
 }
 
@@ -18,7 +19,7 @@
 }
 
 .buttonLinks {  
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -46,6 +47,10 @@
     position: absolute;
 }
 
+.solid{
+  width: 544px;
+}
+
 .a{
     border: 0,5px solid #5a5a5a;
     box-shadow: (1px, 1px, 1px, 3px);
@@ -53,27 +58,52 @@
     background-color: aliceblue;
     height: 25px;
     width: fit-content;
-    
 }
 
+ input,
+ input::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 3;
+ }
 .container{
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     margin-bottom: 125px;
+    margin-top: 150px;
 }
 
 .settings{
     margin-bottom: 50px;
+    margin-top: 150px;
 }
 .container2{
     display: block;
     width: fit-content;
 }
 
+.weatherDescription{
+  margin-left: 350px;
+  margin-top: -50px;
+  margin-right: 350px;
+}
+
+.weatherContainer0{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  margin-bottom: 25px;
+}
+
+.TravelContainer1{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  margin-bottom: 25px;
+}
+
+
 .weatherTable{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 50px;
     width: 40%;
     text-align: left;
@@ -97,7 +127,50 @@ th{
     text-align: center;
   }
 
+  h2 , h3{
+    font-family: 'Montserrat', sans-serif;
+  }
 
+  .containerButton{
+    position: relative;
+    top: 30%;
+    left:30%;
+    width: 450px;
+    cursor: pointer;
+    }
+
+  li{
+    display:inline-block;
+  }
+
+  li a{
+    text-decoration: none;
+    color:black;
+    font-family:'Montserrat', sans-serif;
+    font-size: 25px;
+    padding: 0 20px;
+    display: inline-block;
+  }
+
+  .cool-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0fa3b1;
+    transition: width .3s;
+  }
+
+  .cool-link:hover::after{
+    width: 100%;
+    transition: width 3.s;
+  }
+
+
+
+
+
+  /* TOGGLE */
   /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -139,11 +212,11 @@ th{
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color:  #0fa3b1;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px  #0fa3b1;
   }
   
   input:checked + .slider:before {
@@ -160,4 +233,6 @@ th{
   .slider.round:before {
     border-radius: 50%;
   }
- 
+
+
+  
