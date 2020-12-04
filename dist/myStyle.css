@@ -5,6 +5,8 @@
     font-family: 'Alice', serif;
     font-family: 'Comfortaa', cursive;
     font-size: 40px;
+    cursor: pointer;
+    margin-left: 60px;
 }
 
 .textAbout{
@@ -60,6 +62,7 @@
     width: fit-content;
 }
 
+
  input,
  input::-webkit-input-placeholder {
     font-size: 20px;
@@ -82,9 +85,11 @@
 }
 
 .weatherDescription{
-  margin-left: 350px;
-  margin-top: -50px;
-  margin-right: 350px;
+  margin-left: 100px;
+  margin-right: 300px;
+  margin-top: 80px;
+  font-family: 'Montserrat', sans-serif;
+  color: #5a5a5a;
 }
 
 .weatherContainer0{
@@ -93,7 +98,11 @@
   margin-bottom: 25px;
 }
 
-.TravelContainer1{
+.weatherContainers{
+  margin: 40px;
+}
+
+.travelContainer1{
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   margin-bottom: 25px;
@@ -114,8 +123,10 @@
 table,  td  {
     border: 1px solid black;
     border-collapse: collapse;
-    height: 50px;
-    padding: 20px;
+    height: 60px;
+    padding: 12px;
+    margin: 65%;
+    margin-top: 10%;
   }
 
 
