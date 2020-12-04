@@ -86,17 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/index.htm":
-/*!***********************!*\
-  !*** ./src/index.htm ***!
-  \***********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "index.htm";
-
-/***/ }),
-
 /***/ "./src/js/index.ts":
 /*!*************************!*\
   !*** ./src/js/index.ts ***!
@@ -199,7 +188,7 @@ module.exports = __webpack_require__.p + "bundle.css";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./src/index.htm */"./src/index.htm");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './src/index.htm'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 __webpack_require__(/*! ./src/scss/styles.scss */"./src/scss/styles.scss");
 module.exports = __webpack_require__(/*! ./src/js/index.ts */"./src/js/index.ts");
 
