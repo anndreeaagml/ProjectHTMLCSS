@@ -2046,6 +2046,17 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./src/index.htm":
+/*!***********************!*\
+  !*** ./src/index.htm ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "index.htm";
+
+/***/ }),
+
 /***/ "./src/js/index.ts":
 /*!*************************!*\
   !*** ./src/js/index.ts ***!
@@ -2058,22 +2069,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/axios/index */ "./node_modules/axios/index.js");
 /* harmony import */ var _node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0__);
 
+var sensorPage = document.getElementById("logPage");
+var aboutPage = document.getElementById("aboutPage");
+var settingsPage = document.getElementById("settingsPage");
+var dataTable = document.getElementById("dataTable");
+document.addEventListener("onload", switchToSensor); //someone please find the  page loaded or loading event
 var sensorButton = document.getElementById("sensorButton");
-sensorButton.addEventListener("click", showAllData);
+sensorButton.addEventListener("click", switchToSensor);
+var aboutButton = document.getElementById("aboutButton");
+aboutButton.addEventListener("click", switchToAbout);
+var settingsButton = document.getElementById("settingsButton");
+settingsButton.addEventListener("click", switchToSettings);
 var uri = "https://mirroculousweb.azurewebsites.net/mirror";
-var dataTable = document.getElementById("datatable");
+function switchToSensor() {
+    sensorPage.hidden = false;
+    aboutPage.hidden = true;
+    aboutPage.style.display = "none"; //workaround because you can't gide grids for some reason
+    settingsPage.hidden = true;
+    showAllData();
+}
+function switchToAbout() {
+    sensorPage.hidden = true;
+    aboutPage.hidden = false;
+    aboutPage.style.display = "grid";
+    settingsPage.hidden = true;
+}
+function switchToSettings() {
+    sensorPage.hidden = true;
+    aboutPage.hidden = true;
+    aboutPage.style.display = "none";
+    settingsPage.hidden = false;
+}
 function showAllData() {
     ClearTable();
     _node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0___default.a.get(uri).then(function (response) {
         response.data.forEach(function (mirror) {
-            console.log(mirror.temperature + mirror.humidity + mirror.datetime.toDateString());
+            console.log(mirror.temperature + mirror.humidity + mirror.dateTime.toString());
             var row = document.createElement("tr");
             var temperature = document.createElement("td");
             var humidity = document.createElement("td");
             var timestamp = document.createElement("td");
             temperature.append(mirror.temperature.toString());
             humidity.append(mirror.humidity.toString());
-            timestamp.append(mirror.datetime.toDateString());
+            timestamp.append(mirror.dateTime.toString()); //it really doesn't like toDateString()
             row.appendChild(temperature);
             row.appendChild(humidity);
             row.appendChild(timestamp);
@@ -2110,7 +2148,7 @@ module.exports = __webpack_require__.p + "bundle.css";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-!(function webpackMissingModule() { var e = new Error("Cannot find module './src/index.htm'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+__webpack_require__(/*! ./src/index.htm */"./src/index.htm");
 __webpack_require__(/*! ./src/scss/styles.scss */"./src/scss/styles.scss");
 module.exports = __webpack_require__(/*! ./src/js/index.ts */"./src/js/index.ts");
 

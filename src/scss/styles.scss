@@ -1,15 +1,304 @@
-$fontColor: #0091aa;
-$colorHeading: #be4a14;
-#content  // div with id: content
-{
-    color: $fontColor;
+.title {   
+text-align: left;
+color: #0fa3b1;
+font-family: 'Alice', serif;
+font-family: 'Comfortaa', cursive;
+font-size: 40px;
+cursor: pointer;
+margin-left: 60px;
 }
 
-h2
-{
-    color: $colorHeading;
+.textAbout{
+width: 600px;
 }
 
-h1{
-    @extend h2;
+
+.solid {
+border: 3px solid #707070;
+padding:25px;
+text-align: justify;
 }
+
+.buttonLinks {  
+font-family: 'Montserrat', sans-serif;
+text-align: center;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 50px;
+padding: 50px;
+}
+.buttonLinks a{
+font-size: 20px;
+font-weight: 900;
+}
+
+ img{
+width: 600px;
+height: 250px;
+}
+
+.image{
+padding: 17px;
+position: relative;
+}
+
+.smallerAbout{
+width: 500px;
+position: absolute;
+}
+
+.solid{
+width: 544px;
+}
+
+.a{
+border: 0,5px solid #5a5a5a;
+box-shadow: (1px, 1px, 1px, 3px);
+border-radius: 25px;
+background-color: aliceblue;
+height: 25px;
+width: fit-content;
+}
+
+
+input, input::-webkit-input-placeholder {
+font-size: 20px;
+line-height: 3;
+}
+.container{
+display: grid;
+grid-template-columns: repeat(2, 2fr);
+margin-bottom: 125px;
+margin-top: 150px;
+}
+
+.settings{
+margin-bottom: 50px;
+margin-top: 150px;
+}
+.container2{
+display: block;
+width: fit-content;
+}
+
+.weatherDescription{
+margin-left: 100px;
+margin-right: 300px;
+margin-top: 110px;
+font-family: 'Montserrat', sans-serif;
+color: #5a5a5a;
+}
+
+.travelDescription{
+font-family: 'Montserrat', sans-serif;
+color: #5a5a5a;
+margin-left: 100px;
+margin-right: 300px;
+margin-top: 110px
+}
+
+.weatherContainer0{
+display: grid;
+grid-template-columns: repeat(2, 2fr);
+margin-bottom: 25px;
+}
+
+.weatherContainers{
+margin: 40px;
+}
+
+.timeContainer{
+margin: 40px;
+}
+
+.travelContainer1{
+display: grid;
+grid-template-columns: repeat(2, 2fr);
+margin-bottom: 100px;
+}
+
+.weatherTable{
+font-family: 'Montserrat', sans-serif;
+text-align: center;
+margin-top: 150px;
+margin-bottom: 50px;
+width: 40%;
+text-align: left;
+}
+
+table,  td{
+border: 1px solid black;
+border-collapse: collapse;
+height: 60px;
+padding: 12px;
+margin: 65%;
+margin-top: 10%;
+}
+
+th{
+border: 1px solid black;
+border-collapse: collapse;
+height: 50px;
+text-align: center;
+}
+
+h2{
+font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+font-family: 'Montserrat', sans-serif;
+font-size: 25px;
+}
+
+.containerButton{
+position: relative;
+top: 30%;
+left:30%;
+width: 450px;
+cursor: pointer;
+}
+
+li{
+display:inline-block;
+}
+
+li a{
+text-decoration: none;
+color:black;
+font-family:'Montserrat', sans-serif;
+font-size: 25px;
+padding: 0 20px;
+display: inline-block;
+}
+
+.cool-link::after{
+content: '';
+display: block;
+width: 0;
+height: 2px;
+background: #0fa3b1;
+transition: width .3s;
+}
+
+.cool-link:hover::after{
+width: 100%;
+transition: width .3s;
+}
+
+.a-B{
+height: 300px;
+width: 100px;
+padding-left: 30px;
+}
+
+.yourLocation{
+padding-top: 8px;
+height: 100px;
+}
+
+.bottomLine{
+background: transparent;
+border: none;
+border-bottom: 3px solid #000000; 
+}
+
+.destination{
+height: 100px;
+margin-top: 246px;
+margin-bottom: -306px;
+margin-left: -304px;
+}
+
+.timeDateSettings{
+display: grid;
+grid-template-columns: repeat(2, 2fr);
+margin-top: 150px;
+}
+
+
+
+/* 1. html -> CSS 2. INPUT[name="X"] (INPUT pc / name (HTML smo addali u html.) 3. :focus(nas slucaj borderi)   */
+.weatherContainer1 input[name="loc1"]:focus{ 
+  outline: none;
+}
+
+.weatherContainer2 input[name="loc2"]:focus{
+  outline: none;
+}
+
+.yourLocation input[name="location"]:focus{
+  outline: none;
+}
+
+.destination input[name="destinationInput"]:focus{
+  outline: none;
+}
+
+
+  /* TOGGLE */
+  /* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+/* Hide default HTML checkbox */
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+/* The slider */
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color:  #0fa3b1;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px  #0fa3b1;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+
+  
