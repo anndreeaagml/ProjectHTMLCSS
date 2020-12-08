@@ -243,6 +243,8 @@ th{
 .destination input[name="destinationInput"]:focus{
   outline: none;
 }
+
+
   /* TOGGLE */
   /* The switch - the box around the slider */
 .switch {
