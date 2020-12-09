@@ -8,6 +8,16 @@ cursor: pointer;
 margin-left: 60px;
 }
 
+.realTemp {   
+text-align: center;
+position: relative;
+left:50%;
+color: #0fa3b1;
+font-family: 'Alice', serif;
+font-family: 'Comfortaa', cursive;
+font-size: 30px;
+}
+
 .textAbout{
 width: 600px;
 }
@@ -119,7 +129,7 @@ margin-bottom: 100px;
 .weatherTable{
 font-family: 'Montserrat', sans-serif;
 text-align: center;
-margin-top: 150px;
+margin-top: 60px;
 margin-bottom: 50px;
 width: 40%;
 text-align: left;

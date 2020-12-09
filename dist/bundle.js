@@ -2104,6 +2104,8 @@ function showAllData() {
     _node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://api.openweathermap.org/data/2.5/weather?q=Roskilde&units=metric&appid=4647031774fd7ac91dfad95fb1011dd4")
         .then(function (response) {
         console.log(response.data.main.temp + " " + response.data.main.humidity);
+        var currentTemp = document.getElementById("currentTemp");
+        currentTemp.textContent = response.data.main.temp + " C, " + response.data.main.humidity + "% humidity";
     }).catch(function (error) {
         console.log(error.message);
     });

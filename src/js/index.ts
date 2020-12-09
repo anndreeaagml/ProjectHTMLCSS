@@ -53,8 +53,11 @@ function switchToSettings():void{
 
 function showAllData():void{
     axios.get<IWeather>("http://api.openweathermap.org/data/2.5/weather?q=Roskilde&units=metric&appid=4647031774fd7ac91dfad95fb1011dd4")
-    .then(function(response:AxiosResponse<IWeather>):void{
-        console.log(response.data.main.temp+" "+response.data.main.humidity)
+    .then(function(response:AxiosResponse<IWeather>):void
+    {
+        console.log(response.data.main.temp+" "+response.data.main.humidity);
+        let currentTemp:HTMLElement=document.getElementById("currentTemp");
+        currentTemp.textContent = response.data.main.temp+" C, "+response.data.main.humidity+"% humidity";
     }).catch(function(error:AxiosError):void{
         console.log(error.message);
     });
