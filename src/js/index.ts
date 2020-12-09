@@ -6,7 +6,7 @@ interface IMirror{
   dateTime:Date; //I know , Marcell, I am also mad about this. Bit it has to be capital T
 }
 
-interface Imain{
+interface IWeather{
     main: any;
 }
 
@@ -52,8 +52,8 @@ function switchToSettings():void{
 }
 
 function showAllData():void{
-    axios.get<Imain>("http://api.openweathermap.org/data/2.5/weather?q=Roskilde&units=metric&appid=4647031774fd7ac91dfad95fb1011dd4")
-    .then(function(response:AxiosResponse<Imain>):void{
+    axios.get<IWeather>("http://api.openweathermap.org/data/2.5/weather?q=Roskilde&units=metric&appid=4647031774fd7ac91dfad95fb1011dd4")
+    .then(function(response:AxiosResponse<IWeather>):void{
         console.log(response.data.main.temp+" "+response.data.main.humidity)
     }).catch(function(error:AxiosError):void{
         console.log(error.message);
