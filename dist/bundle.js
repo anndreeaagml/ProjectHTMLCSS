@@ -2122,7 +2122,7 @@ function showAllData() {
     });
 }
 function ClearTable() {
-    while (dataTable.firstChild != dataTable.lastChild) {
+    while (dataTable.childElementCount > 1) {
         dataTable.removeChild(dataTable.lastChild);
     }
 }

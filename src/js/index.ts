@@ -75,7 +75,7 @@ function showAllData():void{
 
 function ClearTable():void
 {
-    while(dataTable.firstChild!=dataTable.lastChild)
+    while(dataTable.childElementCount>1)
     {
         dataTable.removeChild(dataTable.lastChild);
     }
