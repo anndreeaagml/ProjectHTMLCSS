@@ -57,7 +57,7 @@ function showAllData():void{
     {
         console.log(response.data.main.temp+" "+response.data.main.humidity);
         let currentTemp:HTMLElement=document.getElementById("currentTemp");
-        currentTemp.textContent = response.data.main.temp+" C, "+response.data.main.humidity+"% humidity";
+        currentTemp.textContent = "Outdoors Weather: " + response.data.main.temp+" ºC, "+response.data.main.humidity+"% humidity";
     }).catch(function(error:AxiosError):void{
         console.log(error.message);
     });

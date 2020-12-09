@@ -2105,7 +2105,7 @@ function showAllData() {
         .then(function (response) {
         console.log(response.data.main.temp + " " + response.data.main.humidity);
         var currentTemp = document.getElementById("currentTemp");
-        currentTemp.textContent = response.data.main.temp + " C, " + response.data.main.humidity + "% humidity";
+        currentTemp.textContent = "Outdoors Weather: " + response.data.main.temp + " ºC, " + response.data.main.humidity + "% humidity";
     }).catch(function (error) {
         console.log(error.message);
     });
