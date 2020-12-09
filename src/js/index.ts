@@ -57,6 +57,7 @@ function showAllData():void{
         {
         console.log(mirror.temperature+mirror.humidity+mirror.dateTime.toString());
         let row:HTMLTableRowElement=document.createElement("tr");
+        let otemperature:HTMLTableCellElement=document.createElement("td");
         let temperature:HTMLTableCellElement=document.createElement("td");
         let humidity:HTMLTableCellElement=document.createElement("td");
         let timestamp:HTMLTableCellElement=document.createElement("td");
@@ -64,6 +65,7 @@ function showAllData():void{
         humidity.append(mirror.humidity.toString()+"%");
         let tt:String[]=mirror.dateTime.toString().split('T')
         timestamp.append(tt[0]+" "+tt[1]); //it really doesn't like toDateString()
+        row.appendChild(otemperature);
         row.appendChild(temperature);
         row.appendChild(humidity);
         row.appendChild(timestamp);
