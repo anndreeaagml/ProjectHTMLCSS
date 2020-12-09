@@ -6,6 +6,15 @@ interface IMirror{
   dateTime:Date; //I know , Marcell, I am also mad about this. Bit it has to be capital T
 }
 
+interface Imain{
+    temp:number;
+    feels_like:number;
+    temp_min:number;
+    temp_max:number;
+    pressure:number;
+    humidity:number;
+}
+
 let sensorPage:HTMLElement=document.getElementById("logPage");
 let aboutPage:HTMLElement=document.getElementById("aboutPage");
 let settingsPage:HTMLElement=document.getElementById("settingsPage");
@@ -48,16 +57,19 @@ function switchToSettings():void{
 }
 
 function showAllData():void{
+    axios.get<Imain>("http://api.openweathermap.org/data/2.5/weather?q=Roskilde&units=metric&appid=4647031774fd7ac91dfad95fb1011dd4").then(function(response:AxiosResponse<Imain>):void{
+        console.log(response.data.temp+" "+response.data.humidity)
+    }).catch(function(error:AxiosError):void{
+        console.log(error.message);
+    });
 
     ClearTable();
-    
     axios.get<IMirror[]>(uri).then(function(response:AxiosResponse<IMirror[]>):void
     {
         response.data.forEach((mirror:IMirror)=>
         {
         console.log(mirror.temperature+mirror.humidity+mirror.dateTime.toString());
         let row:HTMLTableRowElement=document.createElement("tr");
-        let otemperature:HTMLTableCellElement=document.createElement("td");
         let temperature:HTMLTableCellElement=document.createElement("td");
         let humidity:HTMLTableCellElement=document.createElement("td");
         let timestamp:HTMLTableCellElement=document.createElement("td");
@@ -65,7 +77,6 @@ function showAllData():void{
         humidity.append(mirror.humidity.toString()+"%");
         let tt:String[]=mirror.dateTime.toString().split('T')
         timestamp.append(tt[0]+" "+tt[1]); //it really doesn't like toDateString()
-        row.appendChild(otemperature);
         row.appendChild(temperature);
         row.appendChild(humidity);
         row.appendChild(timestamp);
@@ -83,7 +94,3 @@ function ClearTable():void
         dataTable.removeChild(dataTable.lastChild);
     }
 }
-
-
-
-
