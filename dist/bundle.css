@@ -1,10 +1,8 @@
 .title {
   text-align: left;
   color: #0fa3b1;
-  font-family: 'Alice', serif;
   font-family: 'Comfortaa', cursive;
   font-size: 40px;
-  cursor: pointer;
   margin-left: 60px; }
 
 .realTemp {
@@ -12,7 +10,6 @@
   margin: auto;
   padding-bottom: 2%;
   color: #0fa3b1;
-  font-family: 'Alice', serif;
   font-family: 'Comfortaa', cursive;
   font-size: 30px; }
 
@@ -72,18 +69,17 @@ input, input::-webkit-input-placeholder {
   width: fit-content; }
 
 .weatherDescription {
-  margin-left: 100px;
-  margin-right: 300px;
-  margin-top: 110px;
   font-family: 'Montserrat', sans-serif;
-  color: #5a5a5a; }
+  color: #5a5a5a;
+  margin-bottom: 2%;
+  margin-right: 60%; }
 
 .travelDescription {
   font-family: 'Montserrat', sans-serif;
   color: #5a5a5a;
-  margin-left: 100px;
-  margin-right: 300px;
-  margin-top: 110px; }
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 60%; }
 
 .weatherContainer0 {
   display: grid;
@@ -91,15 +87,15 @@ input, input::-webkit-input-placeholder {
   margin-bottom: 25px; }
 
 .weatherContainers {
-  margin: 40px; }
+  margin-left: 5%; }
 
 .timeContainer {
-  margin: 40px; }
+  padding-left: 5%; }
 
 .travelContainer1 {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
-  margin-bottom: 100px; }
+  margin-bottom: 0px; }
 
 .weatherTable {
   font-family: 'Montserrat', sans-serif;
@@ -123,8 +119,7 @@ h2 {
   font-family: 'Montserrat', sans-serif; }
 
 h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 25px; }
+  font-family: 'Montserrat', sans-serif; }
 
 .containerButton {
   margin: auto;
@@ -156,13 +151,12 @@ li a {
   width: 100%;
   transition: width .3s; }
 
-/*.a-B{
-height: 300px;
-width: 100px;
-padding-left: 30px;
-}*/
+.a-B {
+  aspect-ratio: initial;
+  width: 35px;
+  height: 50px; }
+
 .yourLocation {
-  padding-top: 8px;
   height: 100px; }
 
 .bottomLine {
@@ -170,12 +164,12 @@ padding-left: 30px;
   border: none;
   border-bottom: 3px solid #000000; }
 
-.destination {
-  height: 100px;
-  margin-top: 246px;
-  margin-bottom: -306px;
-  margin-left: -304px; }
-
+/*.destination{
+height: 100px;
+margin-top: 246px;
+margin-bottom: -306px;
+margin-left: -304px;
+}*/
 .timeDateSettings {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
