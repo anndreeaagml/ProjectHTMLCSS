@@ -26,7 +26,7 @@
   <div class="weatherTable" id="logPage" hidden="true">
     <p class="realTemp" id="currentTemp"></p>
 
-    <table style="width:100%" id="dataTable">
+    <table style="margin: auto;" id="dataTable">
       <tr>
         <th>Indoors Temperature</th>
         <th>Humidity</th>
@@ -37,20 +37,11 @@
   
   <div id="aboutPage" class="container">
     <div class="textAbout"> 
-      <p class="solid">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
-          making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more 
-          obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered 
-          the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) 
-          by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 
-          "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-          Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
-          accompanied by English versions from the 1914 translation by H. Rackham.
+      <p>Our team has an original idea of creating a smart mirror. The goal is to create a mirror that shows useful information to its users, such as time, date, weather, commute information, and more.</p> <p> The name Mirroculous comes from the combination of “mirror” and “miraculous”. To make it real, we are going to need the following items: </p> <p>Semi-transparent mirror 24” or larger screen </p> <p>Picture frame</p> <p>RaspberryPi with a micro-HDMIcable</p> <p> SenseHat</p> The Raspberry Pi will run the open-source MagicMirror software and we are going to write the UDP server communication script for the sensorhub, therefore, we can show the temperature on the mirror, upload it to the database, and view a log on the website which will also be used for remote configuration. The website will use Bootstrap and TypeScript as a design template. The modules we are going to use are:</p> <p> Time and Date</p><p> Weather information</p> <p>Calendar</p><p> Commute information</p> <p>Room temperature and humidity status
       </p>
     </div>
-    <div>
-      <img src="https://i.pinimg.com/originals/97/d5/1d/97d51d35858c87c793bdd634b06ba070.jpg" style="width :60%; height: 100%" alt="">
+    <div >
+      <img src="https://i.pinimg.com/originals/97/d5/1d/97d51d35858c87c793bdd634b06ba070.jpg" alt="">
     </div>
   </div>
   
@@ -111,7 +102,7 @@
   
       <div>
         <span style="display: flex;">
-          <img class="a-B" src="https://scontent-ams4-1.xx.fbcdn.net/v/t1.15752-9/130192137_2555178668113038_4096366853541439148_n.png?_nc_cat=107&ccb=2&_nc_sid=ae9488&_nc_ohc=XRLncfT7Q3kAX8TmcgA&_nc_ht=scontent-ams4-1.xx&oh=cbbfc26c103ec7db8c672a8cf9ec1d60&oe=5FF0DC94">
+          <img class="a-B" src="./bpoint.png">
           <div class="yourLocation">
             <input class="bottomLine" placeholder="Your Location" name="location" type="text" style="width: 300px; height: 35px;">
           </div>
@@ -167,6 +158,6 @@
     </div>
   </div>
 
-<script src="bundle.js"></script>
+<script src="bundle.js" defer></script>
 </body>
 </html>

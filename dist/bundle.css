@@ -9,17 +9,16 @@
 
 .realTemp {
   text-align: center;
-  position: relative;
-  left: 50%;
+  margin: auto;
+  padding-bottom: 2%;
   color: #0fa3b1;
   font-family: 'Alice', serif;
   font-family: 'Comfortaa', cursive;
   font-size: 30px; }
 
 .textAbout {
-  width: 600px; }
-
-.solid {
+  width: 50%;
+  height: fit-content;
   border: 3px solid #707070;
   padding: 25px;
   text-align: justify; }
@@ -37,12 +36,8 @@
   font-weight: 900; }
 
 img {
-  width: 600px;
-  height: 250px; }
-
-.image {
-  padding: 17px;
-  position: relative; }
+  aspect-ratio: initial;
+  max-width: 60%; }
 
 .smallerAbout {
   width: 500px;
@@ -108,25 +103,21 @@ input, input::-webkit-input-placeholder {
 
 .weatherTable {
   font-family: 'Montserrat', sans-serif;
-  text-align: center;
   margin-top: 60px;
-  margin-bottom: 50px;
-  width: 40%;
-  text-align: left; }
+  margin-bottom: 50px; }
 
 table, td {
   border: 1px solid black;
   border-collapse: collapse;
-  height: 60px;
   padding: 12px;
-  margin: 65%;
-  margin-top: 10%; }
+  width: fit-content; }
 
 th {
   border: 1px solid black;
   border-collapse: collapse;
-  height: 50px;
-  text-align: center; }
+  width: fit-content;
+  text-align: center;
+  padding: 20px; }
 
 h2 {
   font-family: 'Montserrat', sans-serif; }
@@ -136,7 +127,7 @@ h3 {
   font-size: 25px; }
 
 .containerButton {
-  position: relative;
+  margin: auto;
   top: 30%;
   left: 30%;
   width: 450px;
@@ -165,11 +156,11 @@ li a {
   width: 100%;
   transition: width .3s; }
 
-.a-B {
-  height: 300px;
-  width: 100px;
-  padding-left: 30px; }
-
+/*.a-B{
+height: 300px;
+width: 100px;
+padding-left: 30px;
+}*/
 .yourLocation {
   padding-top: 8px;
   height: 100px; }
