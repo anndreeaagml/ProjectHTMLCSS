@@ -20,6 +20,7 @@ font-size: 30px;
 .textAbout{
 width: 50%;
 height: fit-content;
+font-family: 'Montserrat', sans-serif;
 border: 3px solid #707070;
 padding:25px;
 text-align: justify;
@@ -42,8 +43,12 @@ font-weight: 900;
 img{
   aspect-ratio: initial;
   max-width: 60%;
+  
   }
-
+.aboutpicture{
+  border:3px solid #000000;
+  border-radius:5px;
+}
 
 .smallerAbout{
 width: 500px;
@@ -63,6 +68,13 @@ height: 25px;
 width: fit-content;
 }
 
+body{
+  background-image: url("https://i.imgur.com/PKrNFMD.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
 
 input, input::-webkit-input-placeholder {
 font-size: 20px;
@@ -129,6 +141,8 @@ border: 1px solid black;
 border-collapse: collapse;
 padding: 12px;
 width:fit-content;
+background-color: #ffffff3f ;
+
 }
 
 th{
